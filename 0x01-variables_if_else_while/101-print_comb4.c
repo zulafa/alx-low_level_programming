@@ -1,31 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
 /**
  * main - Entry point
  * Return: Always 0 (Success)
  */
 
 int main(void)
-
 {
-	int d, p;
+	int c;
+	int d;
+	int e = 0;
 
-	for (d = '0'; d < '9'; d++)
+	while (e < 10)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		d = 0;
+		while (d < 10)
 		{
-			if (p != d)
+			c = 0;
+			while (c < 10)
 			{
-				putchar(d);
-				putchar(p);
-				if (d == '8' && p == '9')
-					continue;
-				putchar(',');
-				putchar(' ');
+				if (c != d && e < d && d < c)
+				{
+					putchar('0' + e);
+					putchar('0' + d);
+					putchar('0' + c);
+					if (c + d + e != 9 + 8 + 7)
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+				c++;
+
 			}
+			d++;
+
 		}
+		e++;
+
 	}
 	putchar('\n');
 	return (0);
