@@ -1,34 +1,25 @@
 #include "main.h"
 
 /**
- * puts_half - Prints half of a string
- * @str: The string to print
+ * puts_half - prints the second half of a given string
+ * @str: passed string pointer
+ *
  * Return: void
  */
-
 void puts_half(char *str)
-
 {
-	int j = 0
-	int k;
+int len = 0;
 
-	while (str[j] != '\0')
-	{
-		j++;
-	}
-	if (j % 2 == 1)
-	{
-		k = (j - 1) / 2;
-		k += 1;
-	}
-	else
-	{
-		k = j / 2;
-		}
-
-	for (; k < j; k++)
-	{
-		_putchar(str[k]);
-	}
-	_putchar('\n');
+while (*(str + len) != '\0')
+len++;
+if (len % 2 == 0)
+len /= 2;
+else
+len = len / 2 + 1;
+while (*(str + len) != '\0')
+{
+_putchar(*(str + len));
+len++;
+}
+_putchar('\n');
 }
