@@ -92,12 +92,10 @@ int strNumbers(char *str)
  * @n1: first number
  * @n2: second number
  * Return: void
-*/
-OAOA
-OAvoid multiply(char *n1, char *n2)
-OA
-OA
-OA{
+ */
+OAOAOA
+OAOAOAvoid multiply(char *n1, char *n2)
+OAOAOA{
 	int idx, n1n, n2n, res, tmp, total;
 	int n1l = _strlen(n1);
 	int n2l = _strlen(n2);
@@ -147,7 +145,8 @@ int strNumbers(char *str)
  * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc,
+	       	char **argv)
 {
 	char *nb1 = argv[1];
 	char *nb2 = argv[2];
