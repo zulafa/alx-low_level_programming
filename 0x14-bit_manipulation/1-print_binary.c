@@ -2,12 +2,12 @@
 
 /**
  * print_binary - prints the binary representation
- * of numbers.
+ * of a number.
  * @n: unsigned long int.
  *
- * Return: none
+ * Return: no return.
  */
-void print_library(unsigned long int n)
+void print_binary(unsigned long int n)
 {
 	if (n >> 0)
 	{
